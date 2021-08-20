@@ -6,19 +6,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MacBook-Pro</title>
-
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
     <header></header>
+    <!-- Main Part Start -->
     <main>
-        <section>
-            <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
-            <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU and 16 core
-                Neural engine 8GB unified memory 256GB SSD Storage Two Thunderbolt / USB 4 ports magic Mouse magic
-                keyboard - US English</p>
+        <div class="grid grid-cols-2 gap-x-20 w-5/6 m-auto my-6">
+            <section>
+                <img src="images/mac.png" alt="MacBook">
+            </section>
+            <section>
+                <h1 class="text-4xl font-bold mb-3">Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+                <p class="mb-10">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core
+                    GPU
+                    and 16 core
+                    Neural engine 8GB unified memory 256GB SSD Storage Two Thunderbolt / USB 4 ports magic Mouse magic
+                    keyboard - US English</p>
+                <!-- Memory Option -->
+                <h2 class="text-xl font-bold my-1">Memory</h2>
+                <button class="border-2 hover:border-purple-500 border-gray-500 rounded p-2">8GB unified memory</button>
+                <button class="border-2 hover:border-purple-500 border-gray-500 rounded p-2">16GB unified
+                    memory</button>
+
+                <!-- Storage Option -->
+                <h2 class="text-xl font-bold mt-14 mb-1">Storage</h2>
+                <button class="border-2 hover:border-purple-500 border-gray-500 rounded p-2">256GB SSD Storage</button>
+                <button class="border-2 hover:border-purple-500 border-gray-500 rounded p-2">512GB SSD Storage</button>
+                <button class="border-2 hover:border-purple-500 border-gray-500 rounded p-2">1TB SSD Storage</button>
+
+                <!-- Delivery Option -->
+                <h2 class="text-xl font-bold mt-14 mb-1">Choose your delivery option</h2>
+                <button class="border-2 hover:border-purple-500 border-gray-500 rounded p-2 mb-2">Friday, Aug 25 FREE
+                    Prime
+                    Delivery</button>
+                <button class="border-2 hover:border-purple-500 border-gray-500 rounded p-2">Friday, Aug 21 Delivery
+                    Charge
+                    $20</button>
+
+                <!-- Pricing Strategies -->
+                <div class="flex justify-between shadow-xl mb-3 w-2/4 mt-14">
+                    <h2 class="text-xl font-bold p-2">Best Price</h2>
+                    <h2 class="text-xl font-bold p-2">$ <span>1299</span></h2>
+                </div>
+                <div class="flex justify-between shadow-xl mb-3 w-2/4">
+                    <h2 class="text-xl font-bold p-2">Extra Memory Cost</h2>
+                    <h2 class="text-xl font-bold p-2">$ <span>0</span></h2>
+                </div>
+                <div class="flex justify-between shadow-xl mb-3 w-2/4">
+                    <h2 class="text-xl font-bold p-2">Extra Storage Cost</h2>
+                    <h2 class="text-xl font-bold p-2">$ <span>0</span></h2>
+                </div>
+                <div class="flex justify-between shadow-xl mb-3 w-2/4 border-b-2 border-gray-900">
+                    <h2 class="text-xl font-bold p-2">Delivery Charges</h2>
+                    <h2 class="text-xl font-bold p-2">$ <span>0</span></h2>
+                </div>
+                <div class="flex justify-between shadow-xl mb-3 w-2/4">
+                    <h2 class="text-xl font-bold p-2">Total Price</h2>
+                    <h2 class="text-xl font-bold p-2">$ <span>1299</span></h2>
+                </div>
+
+                <!-- Input Pomo Code -->
+                <div class="">
+                    <div class="flex justify-between shadow-xl mb-3 w-2/4">
+                        <h2 class="text-xl font-bold p-2">Add Pomo code</h2>
+                    </div>
+
+                    <input type="text" class="border-2 hover:border-purple-500 border-gray-500 rounded p-2">
+                    <button class="bg-red-500 px-6 py-3 rounded-md">Apply</button>
+                </div>
+            </section>
+        </div>
+        <hr class="border-b-1 border-gray-300">
+        <!-- Footer -->
+        <section class="mt-8 mb-12">
+            <h1 class="text-4xl font-bold text-center">Total: $<span>1299</span></h1>
         </section>
     </main>
+    <!-- Main Part End -->
     <script src="js/script.js"></script>
 </body>
 
