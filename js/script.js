@@ -16,75 +16,74 @@ const deliveryCost = document.getElementById('delivery-cost');
 const totalCost = document.getElementById('total-cost');
 
 // Event Handler For Memory 
-function getMemoryPrice(isplus) {
-    if (isplus == true) {
-        memoryCost.innerText = 180;
-    }
-    else {
-        memoryCost.innerText = 0;
-    }
+function getMemoryPrice() {
     const totalMemoryCost = parseInt(bestCost.innerText) + parseInt(memoryCost.innerText);
     totalCost.innerText = totalMemoryCost;
     return totalMemoryCost;
-}
 
+}
 memory8Button.addEventListener('click', function () {
-    getMemoryPrice(false)
+    memoryCost.innerText = 0;
+    getMemoryPrice()
+    updateTotalPrice()
 })
 memory16Button.addEventListener('click', function () {
-    getMemoryPrice(true)
+    memoryCost.innerText = 180;
+    getMemoryPrice()
+    updateTotalPrice()
 })
 
-const abc =
+// Event Handler For Storage 
+function getStoragePrice() {
+    const totalStorageCost = parseInt(bestCost.innerText) + parseInt(storageCost.innerText);
+    totalCost.innerText = totalStorageCost;
+    return totalStorageCost;
 
-
-    // Event Handler For Storage 
-    function getStoragePrice(plus) {
-        if (plus == 0) {
-            storageCost.innerText = 0;
-        }
-        else if (plus == 100) {
-            storageCost.innerText = 100;
-        }
-        else if (plus == 180) {
-            storageCost.innerText = 180;
-        }
-        const totalStorageCost = parseInt(bestCost.innerText) + parseInt(storageCost.innerText);
-        totalCost.innerText = totalStorageCost;
-    }
+}
 
 storage256Button.addEventListener('click', function () {
-    getStoragePrice(0)
+    storageCost.innerText = 0;
+    getStoragePrice()
+    updateTotalPrice()
 })
 storage512Button.addEventListener('click', function () {
-    getStoragePrice(100)
+    storageCost.innerText = 100;
+    getStoragePrice()
+    updateTotalPrice()
 })
 storage1TBButton.addEventListener('click', function () {
-    getStoragePrice(180)
+    storageCost.innerText = 180;
+    getStoragePrice()
+    updateTotalPrice()
 })
 
-// Event Handler For Delivery Option 
-function getDeliveryPrice(isadd) {
-    if (isadd == 0) {
-        deliveryCost.innerText = 0;
-    }
-    else if (isadd == 20) {
-        deliveryCost.innerText = 20;
-    }
+// Event Handler For Delivery Option
+function getDeliveryPrice() {
     const totalDeliveryCost = parseInt(bestCost.innerText) + parseInt(deliveryCost.innerText);
     totalCost.innerText = totalDeliveryCost;
+    return totalDeliveryCost;
+
 }
 
 delivery25Button.addEventListener('click', function () {
-    getDeliveryPrice(0)
+    deliveryCost.innerText = 0;
+    getDeliveryPrice()
+    updateTotalPrice()
 })
 delivery21Button.addEventListener('click', function () {
-    getDeliveryPrice(20)
+    deliveryCost.innerText = 20;
+    // getDeliveryPrice()
+    updateTotalPrice()
 })
 
-// Total Cost
-function updateTotal() {
-
+// TOtal price
+function updateTotalPrice() {
+    const bestPrice = parseInt(bestCost.innerText);
+    const memoryPrice = parseInt(memoryCost.innerText);
+    const storagePrice = parseInt(storageCost.innerText);
+    const deliveryPrice = parseInt(deliveryCost.innerText);
+    const totalprice = bestPrice + memoryPrice + storagePrice + deliveryPrice;
+    totalCost.innerText = totalprice;
+    return totalprice;
 }
-
 
