@@ -15,6 +15,10 @@ const storageCost = document.getElementById('storage-cost');
 const deliveryCost = document.getElementById('delivery-cost');
 const totalCost = document.getElementById('total-cost');
 
+const pomoInput = document.getElementById('pomo-input');
+const pomoButton = document.getElementById('pomo-button');
+const discount = document.getElementById('discount');
+
 // Event Handler For Memory 
 function getMemoryPrice() {
     const totalMemoryCost = parseInt(bestCost.innerText) + parseInt(memoryCost.innerText);
@@ -84,6 +88,19 @@ function updateTotalPrice() {
     const deliveryPrice = parseInt(deliveryCost.innerText);
     const totalprice = bestPrice + memoryPrice + storagePrice + deliveryPrice;
     totalCost.innerText = totalprice;
+    discount.innerText = totalprice;
     return totalprice;
 }
+
+// Pomo Code
+pomoButton.addEventListener('click', function () {
+    if (pomoInput.value == 'stevekaku') {
+        function percentage(num, per) {
+            return (num / 100) * per;
+        }
+        discount.innerText = percentage(parseInt(discount.innerText), 80);
+    }
+    pomoInput.value = '';
+})
+
 
